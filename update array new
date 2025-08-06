@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        String[] array = {"tam", "eng", "maths", "sci", "sst", "pt"};
+        array[1] = "tam"; 
+        System.out.println(array[1]); 
+        
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+            
+            if (array[i].equals("maths")) {
+                array[i] = "sci";
+            }
+        }
+        System.out.println("Updated array:");
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
+        }
+    }
+}
