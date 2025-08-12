@@ -12,3 +12,177 @@ class Main {
         System.out.println("The After Character is:"+ch2);
     }
 }
+
+
+import java.util.Scanner;
+public class CodePointCount {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String text = sc.nextLine();
+        int count = text.codePointCount(0, text.length());
+        System.out.println("Number of Unicode code points: " + count);
+        sc.close();
+    }
+}
+
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("First: "); String a = s.nextLine();
+        System.out.print("Second: "); String b = s.nextLine();
+        System.out.println(a.compareTo(b));
+    }
+}
+
+
+public class ConcatExample {
+    public static void main(String[] args) {
+        String s1 = "ARCHANA";
+        String s2 = "SOMASUNDARAM";
+        System.out.println(s1.compareToIgnoreCase(s2));
+        String result = s1.concat(" ").concat(s2);
+        System.out.println(result); 
+    }
+}
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner x = new Scanner(System.in);
+        System.out.println("Enter any String1:");
+        String str1 = x.nextLine();
+        boolean my = str1.contains("ARCHANA");
+        System.out.println(my);
+        boolean mystr = str1.contentEquals("ARCHANA");
+        System.out.println(mystr);
+    }
+}
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        char[] data = {'a','r','c','h'};
+        String str = String.copyValueOf(data,0,4);
+        System.out.println(str);
+        System.out.println(str.endsWith("a")); 
+               System.out.println(str.endsWith("h")); 
+    }
+}
+
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter some text:");
+        String input = sc.nextLine();
+        char[] data = input.toCharArray();
+        String str = String.copyValueOf(data);
+        System.out.println("String from char array: " + str);
+        char[] charArray = str.toCharArray();
+        System.out.print("Char array from string: ");
+        for (char c : charArray) {
+            System.out.print(c + " ");
+        }
+        System.out.println();
+        String str2 = String.copyValueOf(charArray);
+        System.out.println("String again from char array: " + str2);
+        sc.close();
+    }
+}
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        String data = "hello";
+        String hi = "hi %s my age is %d"; 
+        System.out.println(data.equalsIgnoreCase("hello")); 
+        System.out.println(String.format(hi, "hello", 20));  
+    }
+}
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a word: ");
+        String data = sc.nextLine();
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
+        String hi = "hi %s my age %d";
+        System.out.println(data.equalsIgnoreCase(" "));
+        System.out.printf(hi, data, age);
+        sc.close();
+    }
+}
+
+
+public class GetCharacters {
+    public static void main(String[] args) {
+        String str = "ARCHANA";
+         char[] chars = new char[4]; 
+        str.getChars(1, 4, chars, 0);
+        System.out.println(chars); 
+    }
+}
+
+
+public class GetCharacters {
+    public static void main(String[] args) {
+        String str = "9335 ARCHANA ";
+        char[] chars = new char[12]; 
+        str.getChars(0, 9, chars, 0);
+        System.out.println(chars); 
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        String name="ARCHANA";
+        byte[] arr=name.getBytes();
+        System.out.print(arr[0]);
+ }
+
+
+public class Main {
+    public static void main(String[] args) {
+        String name = "ARCHANA";
+        int hash = name.hashCode();
+        System.out.println(hash);
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        String X = "HELLOWORLD";
+        System.out.print(X.indexOf("HELLOWORLD")); 
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        String name="Hello World";
+        String names="";
+        System.out.println(name.isEmpty());
+        System.out.println(names.isEmpty());
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        String name=String.join(" ","ARCHANA","SOMASUNDARAM");
+        System.out.println(name);
+    }
+}
