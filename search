@@ -10,7 +10,7 @@ public class Main {
         }
         Arrays.sort(arr);
         int search =sc.nextInt();
-        int start =0,end=n-1;
+        int start =0,end=size-1;
         boolean f =false;
         while(start<=end){
           int mid =(start+end)/2;
